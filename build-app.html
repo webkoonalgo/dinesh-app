@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build App - App Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="window-controls">
+                <div class="control red"></div>
+                <div class="control yellow"></div>
+                <div class="control green"></div>
+            </div>
+            
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </div>
+                <span class="logo-text">App Builder</span>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item" onclick="navigateTo('buy-license-key.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                        <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                        <path d="M12 3v6m0 6v6"/>
+                    </svg>
+                    <span>Buy License Key</span>
+                </div>
+                
+                <div class="menu-item active" onclick="navigateTo('build-app.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                    <span>Build App</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-projects.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    <span>My Projects</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('design-my-app.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                        <path d="M2 2l7.586 7.586"/>
+                        <circle cx="11" cy="11" r="2"/>
+                    </svg>
+                    <span>Design My App</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-billing.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                    <span>My Billing</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-license-keys.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <circle cx="12" cy="16" r="1"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    <span>My License Keys</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-profile.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span>My Profile</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" style="max-width: calc(100% - 380px);">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Build Your App</h1>
+                    <p>Configure and build your application</p>
+                </div>
+                <div class="header-center">
+                    <input type="text" placeholder="Enter app name" class="app-name-input" value="My Awesome App">
+                </div>
+                <div class="header-right">
+                    <div class="user-avatar">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="User">
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Configuration Section -->
+            <div class="app-selection-section">
+                <h2>App Configuration</h2>
+                <div class="settings-grid">
+                    <!-- First Row: App Settings and License Key -->
+                    <div class="settings-card">
+                        <h3>App Settings</h3>
+                        <div class="input-group">
+                            <input type="text" placeholder="Enter app name" class="settings-input" value="My Awesome App">
+                        </div>
+                        <div class="input-group">
+                            <input type="url" placeholder="https://example.com" class="settings-input">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="com.example.app" class="settings-input">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" placeholder="1.0.0" class="settings-input" value="1.0.0">
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>License Key</h3>
+                        <div class="input-group">
+                            <label class="input-label">Select Project</label>
+                            <div class="select-wrapper">
+                                <select class="settings-select project-selector">
+                                    <option value="">Choose a project...</option>
+                                    <option value="swiggy" data-key="SWG-2024-ABCD-1234">Swiggy Food App</option>
+                                    <option value="apple" data-key="APPL-2024-EFGH-5678">Apple Store App</option>
+                                    <option value="react" data-key="RECT-2024-IJKL-9012">React Dashboard (Expired)</option>
+                                    <option value="telegram" data-key="TELE-2023-MNOP-3456">Telegram Bot App</option>
+                                </select>
+                                <svg class="select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">License Key</label>
+                            <input type="text" value="Select a project to view license key" readonly class="settings-input license-key-input">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Google Maps API Key</label>
+                            <input type="text" placeholder="Enter Google Maps API key" class="settings-input">
+                        </div>
+                    </div>
+
+                    <!-- Second Row: WooCommerce and File Upload Cards -->
+                    <div class="settings-card">
+                        <h3>WooCommerce Settings</h3>
+                        <div class="input-group">
+                            <label class="input-label">Consumer Key</label>
+                            <input type="text" placeholder="Enter consumer key" class="settings-input">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Consumer Secret</label>
+                            <input type="password" placeholder="Enter consumer secret" class="settings-input">
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>App Logo</h3>
+                        <button class="browse-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17,8 12,3 7,8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            Browse Files
+                        </button>
+                        <button class="update-btn">Update</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>App Icon</h3>
+                        <button class="browse-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17,8 12,3 7,8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            Browse Files
+                        </button>
+                        <button class="update-btn">Update</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Splash Screen</h3>
+                        <div class="color-picker-group">
+                            <input type="color" value="#000000" class="color-picker">
+                        </div>
+                        <button class="update-btn">Update</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Google Services JSON</h3>
+                        <button class="browse-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17,8 12,3 7,8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            Browse Files
+                        </button>
+                        <button class="update-btn">Update</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Keystore File</h3>
+                        <button class="browse-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17,8 12,3 7,8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            Browse Files
+                        </button>
+                        <button class="update-btn">Update</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <h3>Keystore Properties</h3>
+                        <button class="browse-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17,8 12,3 7,8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            Browse Files
+                        </button>
+                        <button class="update-btn">Update</button>
+                    </div>
+                    
+                    <!-- Third Row: Facebook Settings (spans full width) -->
+                    <div class="settings-card facebook-settings">
+                        <h3>Facebook Settings</h3>
+                        <div class="input-group">
+                            <label class="input-label">Facebook App Name</label>
+                            <input type="text" placeholder="Enter Facebook app name" class="settings-input">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Facebook App ID</label>
+                            <input type="text" placeholder="Enter Facebook app ID" class="settings-input">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Facebook Client Token</label>
+                            <input type="text" placeholder="Enter Facebook client token" class="settings-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Build Panel -->
+        <div class="order-summary">
+            <h3>Build Configuration</h3>
+            
+            <!-- Phone Preview -->
+            <div class="phone-preview">
+                <div class="phone-preview">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <div class="webkoon-logo">My Awesome App</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Build Options -->
+            <div class="build-options">
+                <div class="select-wrapper">
+                    <select class="settings-select">
+                        <option value="apk">Android APK</option>
+                        <option value="aab">Android AAB</option>
+                        <option value="ios">iOS IPA</option>
+                    </select>
+                    <svg class="select-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none">
+                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                
+                <button class="build-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                    Build
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="build-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy License Key - App Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="window-controls">
+                <div class="control red"></div>
+                <div class="control yellow"></div>
+                <div class="control green"></div>
+            </div>
+            
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </div>
+                <span class="logo-text">App Builder</span>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item active" onclick="navigateTo('buy-license-key.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                        <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                        <path d="M12 3v6m0 6v6"/>
+                    </svg>
+                    <span>Buy License Key</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('build-app.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                    <span>Build App</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-projects.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    <span>My Projects</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('design-my-app.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                        <path d="M2 2l7.586 7.586"/>
+                        <circle cx="11" cy="11" r="2"/>
+                    </svg>
+                    <span>Design My App</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-billing.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                    <span>My Billing</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-license-keys.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <circle cx="12" cy="16" r="1"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    <span>My License Keys</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-profile.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span>My Profile</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Choose Your App License</h1>
+                    <p>Select an app and subscription plan to get started</p>
+                </div>
+                <div class="header-center">
+                    <input type="text" placeholder="Enter your app name" class="app-name-input">
+                </div>
+                <div class="header-right">
+                    <div class="profile-dropdown">
+                        <div class="user-avatar" onclick="toggleProfileMenu()">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="User">
+                        </div>
+                        
+                        <div class="profile-menu" id="profileMenu">
+                            <div class="profile-header">
+                                <div class="profile-avatar">
+                                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="User">
+                                </div>
+                                <div class="profile-name">John Doe</div>
+                                <div class="profile-email">john@example.com</div>
+                            </div>
+                            
+                            <div class="profile-menu-items">
+                                <button class="profile-menu-item" onclick="openProfileSettings()">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    Profile Settings
+                                </button>
+                                
+                                <button class="profile-menu-item" onclick="openChangePassword()">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <circle cx="12" cy="16" r="1"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                    Change Password
+                                </button>
+                                
+                                <button class="profile-menu-item" onclick="openChangeDetails()">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    </svg>
+                                    Edit Details
+                                </button>
+                                
+                                <div class="menu-divider"></div>
+                                
+                                <button class="profile-menu-item danger" onclick="logout()">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                        <polyline points="16,17 21,12 16,7"/>
+                                        <line x1="21" y1="12" x2="9" y2="12"/>
+                                    </svg>
+                                    Logout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Selection Section -->
+            <div class="app-selection-section">
+                <h2>Select Your App Type</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-product="swiggy" data-price="5600">
+                        <div class="product-icon swiggy-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Swiggy Clone</h3>
+                        <p class="product-description">Food delivery app with restaurant management</p>
+                        <div class="product-price">$5,600/year</div>
+                    </div>
+
+                    <div class="product-card" data-product="apple" data-price="4800">
+                        <div class="product-icon apple-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                            </svg>
+                        </div>
+                        <h3>Apple Store Clone</h3>
+                        <p class="product-description">E-commerce app with premium design</p>
+                        <div class="product-price">$4,800/year</div>
+                    </div>
+
+                    <div class="product-card" data-product="wordpress" data-price="3200">
+                        <div class="product-icon wordpress-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <line x1="21.17" y1="8" x2="12" y2="8"/>
+                                <line x1="3.95" y1="6.06" x2="8.54" y2="14"/>
+                                <line x1="10.88" y1="21.94" x2="15.46" y2="14"/>
+                            </svg>
+                        </div>
+                        <h3>WordPress App</h3>
+                        <p class="product-description">Blog and content management app</p>
+                        <div class="product-price">$3,200/year</div>
+                    </div>
+
+                    <div class="product-card" data-product="telegram" data-price="2800">
+                        <div class="product-icon telegram-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M21 2L3 8.5l5.5 2L12 7l-3 8.5L15 18l6-16z"/>
+                            </svg>
+                        </div>
+                        <h3>Telegram Bot</h3>
+                        <p class="product-description">Automated messaging and bot platform</p>
+                        <div class="product-price">$2,800/year</div>
+                    </div>
+
+                    <div class="product-card" data-product="android" data-price="4200">
+                        <div class="product-icon android-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.637.637 0 0 0-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67a.637.637 0 0 0-.83-.22c-.3.16-.42.54-.26.85L6.4 9.48C3.3 11.25 1.28 14.44 1 18h22c-.28-3.56-2.3-6.75-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Android Utility</h3>
+                        <p class="product-description">Native Android utility and tools app</p>
+                        <div class="product-price">$4,200/year</div>
+                    </div>
+
+                    <div class="product-card" data-product="react" data-price="3800">
+                        <div class="product-icon react-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89s-.84 1.89-1.87 1.89c-1.03 0-1.87-.84-1.87-1.89s.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 0 1-2.4-.36c-.51 2.14-.32 3.61.31 3.96"/>
+                            </svg>
+                        </div>
+                        <h3>React Dashboard</h3>
+                        <p class="product-description">Modern admin dashboard with analytics</p>
+                        <div class="product-price">$3,800/year</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Plans Section -->
+            <div class="subscription-section">
+                <h2>Choose Your Subscription Plan</h2>
+                <div class="subscription-plans">
+                    <div class="plan-card" data-plan="monthly" data-multiplier="1" data-discount="0">
+                        <div class="plan-radio">
+                            <input type="radio" name="plan" id="monthly" value="monthly">
+                            <label for="monthly"></label>
+                        </div>
+                        <div class="plan-content">
+                            <h3>Monthly</h3>
+                            <p class="plan-price">Pay monthly • Cancel anytime</p>
+                            <div class="plan-billing">Billed monthly</div>
+                        </div>
+                    </div>
+
+                    <div class="plan-card" data-plan="quarterly" data-multiplier="3" data-discount="10">
+                        <div class="plan-radio">
+                            <input type="radio" name="plan" id="quarterly" value="quarterly">
+                            <label for="quarterly"></label>
+                        </div>
+                        <div class="plan-content">
+                            <h3>Quarterly</h3>
+                            <p class="plan-price">3 months • Save 10%</p>
+                            <div class="plan-billing">Billed every 3 months</div>
+                            <div class="plan-savings">
+                                <span class="save-badge">Save 10%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-card selected" data-plan="annually" data-multiplier="12" data-discount="25">
+                        <div class="plan-radio">
+                            <input type="radio" name="plan" id="annually" value="annually" checked>
+                            <label for="annually"></label>
+                        </div>
+                        <div class="plan-content">
+                            <h3>Annually</h3>
+                            <p class="plan-price">12 months • Best value</p>
+                            <div class="plan-billing">Billed annually</div>
+                            <div class="plan-savings">
+                                <span class="save-badge popular">Save 25%</span>
+                                <span class="popular-badge">Most Popular</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add-ons Section -->
+            <div class="addons-section">
+                <h2>Optional Add-ons</h2>
+                <div class="addons-grid">
+                    <div class="addon-card" data-addon="support" data-price="200">
+                        <div class="addon-checkbox">
+                            <input type="checkbox" id="support" value="support">
+                            <label for="support"></label>
+                        </div>
+                        <div class="addon-content">
+                            <h4>Priority Support</h4>
+                            <p>24/7 priority customer support</p>
+                            <div class="addon-price">+$200/year</div>
+                        </div>
+                    </div>
+
+                    <div class="addon-card" data-addon="customization" data-price="500">
+                        <div class="addon-checkbox">
+                            <input type="checkbox" id="customization" value="customization">
+                            <label for="customization"></label>
+                        </div>
+                        <div class="addon-content">
+                            <h4>Custom Branding</h4>
+                            <p>Remove our branding, add yours</p>
+                            <div class="addon-price">+$500/year</div>
+                        </div>
+                    </div>
+
+                    <div class="addon-card" data-addon="analytics" data-price="300">
+                        <div class="addon-checkbox">
+                            <input type="checkbox" id="analytics" value="analytics">
+                            <label for="analytics"></label>
+                        </div>
+                        <div class="addon-content">
+                            <h4>Advanced Analytics</h4>
+                            <p>Detailed usage and performance analytics</p>
+                            <div class="addon-price">+$300/year</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            
+            <div class="selected-app">
+                <div class="app-preview">
+                    <div class="app-icon-small">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        </svg>
+                    </div>
+                    <div class="app-details">
+                        <div class="app-name">Select an app</div>
+                        <div class="app-plan">Choose your plan</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-breakdown">
+                <div class="pricing-item">
+                    <span class="pricing-label">App License</span>
+                    <span class="pricing-value app-price">$0.00</span>
+                </div>
+                
+                <div class="addons-list">
+                    <!-- Add-ons will be dynamically added here -->
+                </div>
+                
+                <div class="pricing-item subtotal">
+                    <span class="pricing-label">Subtotal</span>
+                    <span class="pricing-value subtotal-amount">$0.00</span>
+                </div>
+                
+                <div class="pricing-item discount" style="display: none;">
+                    <span class="pricing-label discount-label">Discount (0%)</span>
+                    <span class="pricing-value discount-amount">-$0.00</span>
+                </div>
+                
+                <div class="pricing-item tax">
+                    <span class="pricing-label">Tax (8%)</span>
+                    <span class="pricing-value tax-amount">$0.00</span>
+                </div>
+                
+                <div class="pricing-item total">
+                    <span class="pricing-label">Total</span>
+                    <span class="pricing-value total-amount">$0.00</span>
+                </div>
+            </div>
+            
+            <button class="checkout-btn" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                    <path d="M9 12l2 2 4-4"/>
+                </svg>
+                <span>Complete Purchase</span>
+            </button>
+            
+            <div class="terms">
+                <input type="checkbox" id="terms" checked>
+                <label for="terms">I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a></label>
+            </div>
+
+            <div class="security-badges">
+                <div class="security-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#34c759">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>SSL Secured</span>
+                </div>
+                <div class="security-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#34c759">
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                    <span>Money Back Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="buy-license-key.js"></script>
+</body>
+</html>

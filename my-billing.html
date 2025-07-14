@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Billing - App Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="window-controls">
+                <div class="control red"></div>
+                <div class="control yellow"></div>
+                <div class="control green"></div>
+            </div>
+            
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                </div>
+                <span class="logo-text">App Builder</span>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="menu-item" onclick="navigateTo('buy-license-key.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                        <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+                        <path d="M12 3v6m0 6v6"/>
+                    </svg>
+                    <span>Buy License Key</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('build-app.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
+                    <span>Build App</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-projects.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    <span>My Projects</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('design-my-app.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"/>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+                        <path d="M2 2l7.586 7.586"/>
+                        <circle cx="11" cy="11" r="2"/>
+                    </svg>
+                    <span>Design My App</span>
+                </div>
+                
+                <div class="menu-item active" onclick="navigateTo('my-billing.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                        <line x1="1" y1="10" x2="23" y2="10"/>
+                    </svg>
+                    <span>My Billing</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-license-keys.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                        <circle cx="12" cy="16" r="1"/>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                    </svg>
+                    <span>My License Keys</span>
+                </div>
+                
+                <div class="menu-item" onclick="navigateTo('my-profile.html')">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <span>My Profile</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- My Billing Section -->
+        <div class="my-billing-section">
+            <div class="billing-container">
+                <!-- Header -->
+                <div class="billing-header">
+                    <div class="billing-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                            <line x1="1" y1="10" x2="23" y2="10"/>
+                        </svg>
+                    </div>
+                    <div class="billing-title">
+                        <h1>My Billing</h1>
+                        <p>Manage your billing, payments, and license renewals</p>
+                    </div>
+                </div>
+
+                <!-- Billing Overview Cards -->
+                <div class="billing-overview">
+                    <div class="overview-card total-spent">
+                        <div class="overview-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Total Spent</h3>
+                            <p class="overview-amount">$16,800.00</p>
+                            <span class="overview-subtitle">Lifetime billing</span>
+                        </div>
+                    </div>
+
+                    <div class="overview-card pending-dues">
+                        <div class="overview-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Pending Dues</h3>
+                            <p class="overview-amount">$1,500.00</p>
+                            <span class="overview-subtitle">2 licenses expiring</span>
+                        </div>
+                    </div>
+
+                    <div class="overview-card active-licenses">
+                        <div class="overview-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <circle cx="12" cy="16" r="1"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Active Licenses</h3>
+                            <p class="overview-amount">4</p>
+                            <span class="overview-subtitle">Out of 6 purchased</span>
+                        </div>
+                    </div>
+
+                    <div class="overview-card next-renewal">
+                        <div class="overview-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <path d="M23 12a11.05 11.05 0 0 0-3.656-8.23 11.05 11.05 0 0 0-4.482-2.475c-.069-.017-.138-.033-.208-.047a11.05 11.05 0 0 0-2.308-.248"/>
+                                <path d="M1 12a11.05 11.05 0 0 0 3.656 8.23 11.05 11.05 0 0 0 4.482 2.475c.069.017.138.033.208.047a11.05 11.05 0 0 0 2.308.248"/>
+                                <path d="M8 5l4-3 4 3"/>
+                                <path d="M8 19l4 3 4-3"/>
+                            </svg>
+                        </div>
+                        <div class="overview-content">
+                            <h3>Next Renewal</h3>
+                            <p class="overview-amount">Mar 15</p>
+                            <span class="overview-subtitle">Swiggy App license</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- License-wise Billing -->
+                <div class="license-billing-section">
+                    <h2>License-wise Billing</h2>
+                    <div class="license-billing-list">
+                        <!-- Swiggy App License -->
+                        <div class="license-billing-item">
+                            <div class="license-billing-info">
+                                <div class="license-app-icon swiggy-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                    </svg>
+                                </div>
+                                <div class="license-billing-details">
+                                    <h3>Swiggy App</h3>
+                                    <p>License Key: SWG-2024-ABCD-1234</p>
+                                    <div class="billing-dates">
+                                        <span class="purchase-date">Purchased: Mar 15, 2024</span>
+                                        <span class="expiry-date expiring">Expires: Mar 15, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="license-billing-actions">
+                                <div class="billing-amounts">
+                                    <div class="amount-paid">
+                                        <span class="amount-label">Paid</span>
+                                        <span class="amount-value">$5,600.00</span>
+                                    </div>
+                                    <div class="amount-due">
+                                        <span class="amount-label">Due</span>
+                                        <span class="amount-value due">$1,500.00</span>
+                                    </div>
+                                </div>
+                                <div class="billing-buttons">
+                                    <button class="renew-btn" data-license="swiggy">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                            <path d="M23 12a11.05 11.05 0 0 0-3.656-8.23 11.05 11.05 0 0 0-4.482-2.475"/>
+                                            <path d="M1 12a11.05 11.05 0 0 0 3.656 8.23 11.05 11.05 0 0 0 4.482 2.475"/>
+                                        </svg>
+                                        Renew License
+                                    </button>
+                                    <button class="pay-due-btn" data-license="swiggy">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                        </svg>
+                                        Pay Due
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Apple App License -->
+                        <div class="license-billing-item">
+                            <div class="license-billing-info">
+                                <div class="license-app-icon apple-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                    </svg>
+                                </div>
+                                <div class="license-billing-details">
+                                    <h3>Apple App</h3>
+                                    <p>License Key: APPL-2024-EFGH-5678</p>
+                                    <div class="billing-dates">
+                                        <span class="purchase-date">Purchased: Feb 28, 2024</span>
+                                        <span class="expiry-date active">Expires: Feb 28, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="license-billing-actions">
+                                <div class="billing-amounts">
+                                    <div class="amount-paid">
+                                        <span class="amount-label">Paid</span>
+                                        <span class="amount-value">$5,600.00</span>
+                                    </div>
+                                    <div class="amount-due">
+                                        <span class="amount-label">Due</span>
+                                        <span class="amount-value">$0.00</span>
+                                    </div>
+                                </div>
+                                <div class="billing-buttons">
+                                    <button class="renew-btn" data-license="apple">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                            <path d="M23 12a11.05 11.05 0 0 0-3.656-8.23 11.05 11.05 0 0 0-4.482-2.475"/>
+                                            <path d="M1 12a11.05 11.05 0 0 0 3.656 8.23 11.05 11.05 0 0 0 4.482 2.475"/>
+                                        </svg>
+                                        Renew License
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- React App License -->
+                        <div class="license-billing-item">
+                            <div class="license-billing-info">
+                                <div class="license-app-icon react-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                        <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89s-.84 1.89-1.87 1.89c-1.03 0-1.87-.84-1.87-1.89s.84-1.89 1.87-1.89"/>
+                                    </svg>
+                                </div>
+                                <div class="license-billing-details">
+                                    <h3>React App</h3>
+                                    <p>License Key: RECT-2024-IJKL-9012</p>
+                                    <div class="billing-dates">
+                                        <span class="purchase-date">Purchased: Jan 10, 2024</span>
+                                        <span class="expiry-date expired">Expired: Jan 10, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="license-billing-actions">
+                                <div class="billing-amounts">
+                                    <div class="amount-paid">
+                                        <span class="amount-label">Paid</span>
+                                        <span class="amount-value">$5,600.00</span>
+                                    </div>
+                                    <div class="amount-due">
+                                        <span class="amount-label">Due</span>
+                                        <span class="amount-value">$0.00</span>
+                                    </div>
+                                </div>
+                                <div class="billing-buttons">
+                                    <button class="renew-btn expired" data-license="react">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                            <path d="M23 12a11.05 11.05 0 0 0-3.656-8.23 11.05 11.05 0 0 0-4.482-2.475"/>
+                                            <path d="M1 12a11.05 11.05 0 0 0 3.656 8.23 11.05 11.05 0 0 0 4.482 2.475"/>
+                                        </svg>
+                                        Renew Expired
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Telegram App License -->
+                        <div class="license-billing-item">
+                            <div class="license-billing-info">
+                                <div class="license-app-icon telegram-icon">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                                        <path d="M21 2L3 8.5l5.5 2L12 7l-3 8.5L15 18l6-16z"/>
+                                    </svg>
+                                </div>
+                                <div class="license-billing-details">
+                                    <h3>Telegram App</h3>
+                                    <p>License Key: TELE-2023-MNOP-3456</p>
+                                    <div class="billing-dates">
+                                        <span class="purchase-date">Purchased: Dec 5, 2023</span>
+                                        <span class="expiry-date active">Expires: Dec 5, 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="license-billing-actions">
+                                <div class="billing-amounts">
+                                    <div class="amount-paid">
+                                        <span class="amount-label">Paid</span>
+                                        <span class="amount-value">$5,600.00</span>
+                                    </div>
+                                    <div class="amount-due">
+                                        <span class="amount-label">Due</span>
+                                        <span class="amount-value">$0.00</span>
+                                    </div>
+                                </div>
+                                <div class="billing-buttons">
+                                    <button class="renew-btn" data-license="telegram">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                            <path d="M23 12a11.05 11.05 0 0 0-3.656-8.23 11.05 11.05 0 0 0-4.482-2.475"/>
+                                            <path d="M1 12a11.05 11.05 0 0 0 3.656 8.23 11.05 11.05 0 0 0 4.482 2.475"/>
+                                        </svg>
+                                        Renew License
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Billing History -->
+                <div class="billing-history-section">
+                    <h2>Billing History</h2>
+                    <div class="billing-history-table">
+                        <div class="table-header">
+                            <div class="header-cell">Date</div>
+                            <div class="header-cell">App</div>
+                            <div class="header-cell">Description</div>
+                            <div class="header-cell">Amount</div>
+                            <div class="header-cell">Status</div>
+                            <div class="header-cell">Actions</div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="table-cell">Mar 15, 2024</div>
+                            <div class="table-cell">
+                                <div class="app-info">
+                                    <div class="mini-icon swiggy-icon"></div>
+                                    <span>Swiggy App</span>
+                                </div>
+                            </div>
+                            <div class="table-cell">Annual License Purchase</div>
+                            <div class="table-cell">$5,600.00</div>
+                            <div class="table-cell">
+                                <span class="status-badge paid">Paid</span>
+                            </div>
+                            <div class="table-cell">
+                                <button class="download-invoice-btn" data-invoice="swiggy-2024">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7,10 12,15 17,10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell">Feb 28, 2024</div>
+                            <div class="table-cell">
+                                <div class="app-info">
+                                    <div class="mini-icon apple-icon"></div>
+                                    <span>Apple App</span>
+                                </div>
+                            </div>
+                            <div class="table-cell">Annual License Purchase</div>
+                            <div class="table-cell">$5,600.00</div>
+                            <div class="table-cell">
+                                <span class="status-badge paid">Paid</span>
+                            </div>
+                            <div class="table-cell">
+                                <button class="download-invoice-btn" data-invoice="apple-2024">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7,10 12,15 17,10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell">Jan 10, 2024</div>
+                            <div class="table-cell">
+                                <div class="app-info">
+                                    <div class="mini-icon react-icon"></div>
+                                    <span>React App</span>
+                                </div>
+                            </div>
+                            <div class="table-cell">Annual License Purchase</div>
+                            <div class="table-cell">$5,600.00</div>
+                            <div class="table-cell">
+                                <span class="status-badge paid">Paid</span>
+                            </div>
+                            <div class="table-cell">
+                                <button class="download-invoice-btn" data-invoice="react-2024">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7,10 12,15 17,10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div class="table-cell">Dec 5, 2023</div>
+                            <div class="table-cell">
+                                <div class="app-info">
+                                    <div class="mini-icon telegram-icon"></div>
+                                    <span>Telegram App</span>
+                                </div>
+                            </div>
+                            <div class="table-cell">Annual License Purchase</div>
+                            <div class="table-cell">$5,600.00</div>
+                            <div class="table-cell">
+                                <span class="status-badge paid">Paid</span>
+                            </div>
+                            <div class="table-cell">
+                                <button class="download-invoice-btn" data-invoice="telegram-2023">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7,10 12,15 17,10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="my-billing.js"></script>
+</body>
+</html>
