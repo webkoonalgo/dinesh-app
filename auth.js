@@ -316,12 +316,14 @@ function updatePasswordStrength(strength) {
     }
     
     // Update color based on strength
-    if (strength.score <= 2) {
-        strengthBar.style.background = '#ff3b30';
-    } else if (strength.score <= 3) {
-        strengthBar.style.background = '#ff9500';
-    } else {
-        strengthBar.style.background = '#34c759';
+    if (strengthBar) {
+        if (strength.score <= 2) {
+            strengthBar.style.background = '#ff3b30';
+        } else if (strength.score <= 3) {
+            strengthBar.style.background = '#ff9500';
+        } else {
+            strengthBar.style.background = '#34c759';
+        }
     }
 }
 
